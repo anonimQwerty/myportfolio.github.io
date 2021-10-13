@@ -946,4 +946,28 @@
 			font-size: 18px;
 		}
 
+		.firstblock{
+			height: 100%;
+		}
+
+		.firstblock__btn{
+			padding-bottom: 7px;
+		}
+
+		.firstblock__text{
+			margin-top: 50px;
+		}
+		.servise__title{
+			line-height: 40px;
+		}
+
+
 	}
+/*
+	@media (max-width: 460px) {
+
+		.footer__socials p{
+			font-size: 18px;
+		}
+
+	}*/
