@@ -495,7 +495,19 @@
 		margin: 0 auto;
 		margin-top: 40px;
 		display: flex;
-		width: 385px;
+		max-width: 385px;
+		
+
+	}
+
+	.portfolio_buttons_row--1{
+		display: flex;
+		justify-content: space-between;
+		margin-right: 0;
+	}
+
+	.portfolio_buttons_row--2{
+		display: flex;
 		justify-content: space-between;
 	}
 
@@ -959,6 +971,13 @@
 		}
 		.servise__title{
 			line-height: 40px;
+		}
+		.portfolio_buttons_row{
+			flex-direction: column;
+		}
+
+		.footer__socials p{
+			font-size: 10px;
 		}
 
 
