@@ -1,0 +1,949 @@
+	/* Указываем box sizing */
+	*,
+	*::before,
+	*::after {
+	  box-sizing: border-box;
+	}
+
+
+
+	/* Убираем внутренние отступы */
+	ul[class],
+	ol[class] {
+	  padding: 0;
+	}
+
+	/* Убираем внешние отступы */
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	p,
+	ul[class],
+	ol[class],
+	li,
+	figure,
+	figcaption,
+	blockquote,
+	dl,
+	dd {
+	  margin: 0;
+	}
+
+	/* Выставляем основные настройки по-умолчанию для body */
+	body {
+	  font-family: 'Titillium Web', sans-serif;
+	  min-height: 100vh;
+	  scroll-behavior: smooth;
+	  text-rendering: optimizeSpeed;
+	  line-height: 1.5;
+	}
+
+	/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+	ul[class],
+	ol[class] {
+	  list-style: none;
+	}
+
+	/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+	a:not([class]) {
+	  text-decoration-skip-ink: auto;
+	}
+
+	a{
+
+	  text-decoration: none;
+	}
+
+	/* Упрощаем работу с изображениями */
+	img {
+	  max-width: 100%;
+	  display: block;
+	}
+
+	/* Указываем понятную периодичность в потоке данных у article*/
+	article > * + * {
+	  margin-top: 1em;
+	}
+
+	/* Наследуем шрифты для инпутов и кнопок */
+	input,
+	button,
+	textarea,
+	select {
+	  font: inherit;
+	}
+
+	/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+	@media (prefers-reduced-motion: reduce) {
+	  * {
+	    animation-duration: 0.01ms !important;
+	    animation-iteration-count: 1 !important;
+	    transition-duration: 0.01ms !important;
+	    scroll-behavior: auto !important;
+	  }
+	}
+
+	.container
+	{
+	  width: 100%;
+	  padding-right: var(--bs-gutter-x, 0.75rem);
+	  padding-left: var(--bs-gutter-x, 0.75rem);
+	  margin-right: auto;
+	  margin-left: auto;
+	}
+
+	.firstblock{
+		width: 100%;
+		height: 596px;
+		background-color: #87509c;
+	}
+
+	.header {
+		padding-top: 57px;
+		display: flex;
+		justify-content: space-between;
+
+
+	}
+	.leftside {
+		
+	}
+	.rightside {
+		
+	}
+	.header__link {
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: #ffffff;
+		/*margin-left: 43px;*/
+		padding: 12px 16px;
+		transition: 1s;
+
+	}
+
+	.header__link:hover{
+		border-radius: 5px;
+		background-color: rgba(0,0,0,.3);
+	}
+
+	.firstblock__text{
+		font-size: 42.2px;
+		line-height: 48px;
+		font-weight: 700;
+		color: #f7f3ea;
+		max-width: 906px;
+		text-align: center;
+		align-self: center;
+		margin: 0 auto;
+		margin-top: 153px;
+
+	}
+
+	.firstblock__btn{
+		margin: 0 auto;
+		margin-top: 52px;
+		align-self: center;
+		display: flex;
+		flex-direction: column;
+
+		width: 293px;
+		height: 70px;
+
+		
+	}
+
+
+
+
+
+	.firstblock__btn button{
+		background-color: #eb7d4b;
+
+		border: none;
+		border-radius: 5px;
+
+		width: 293px;
+		height: 70px;
+	}
+
+
+	.firstblock__btn button:hover{
+		cursor: pointer;
+	}
+
+
+	.servicesprovise {
+		padding-top: 118px;
+		height: 747px;
+		background-color: #17c2a4;
+
+	}
+
+	.servise__title {
+		font-size: 40px;
+		line-height: 29px;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		color: #ffffff;
+		text-align: center;
+		bottom: 21px;
+	}
+
+	.servise__title::after{
+		content: '';
+		
+	    display: block;
+	    width: 87px;
+	    height: 4px;
+	    margin: 0 auto;
+
+	    margin-top: 21px;
+	    margin-bottom: 23px;
+	    background: rgba(0, 0, 0, .3);
+	    
+	}
+	.servise__subtitle {
+		font-size: 18px;
+		line-height: 26px;
+		font-weight: 400;
+		letter-spacing: 0.02em;
+		color: #ffffff;
+		text-align: center;
+		width: 603px;
+		margin: 0 auto;
+	}
+	.services__features {
+		display: flex;
+		justify-content: space-between;
+	}
+	.servise__feature {
+		flex-direction: column;
+		margin: 0 auto;
+		align-items: center;
+		text-align: center;
+		margin-top: 71px;
+		color: #fff;
+		transition: 1s;
+		
+	}
+
+	.servise__feature img{
+		margin: 0 auto;
+		transition: 1s;
+	}
+
+	.servise__feature h3{
+
+		font-size: 24px;
+		line-height: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+		margin-top: 58px;
+		margin-bottom: 27px;
+
+
+	}
+
+	.servise__feature p{
+
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 300;
+		letter-spacing: 0.02em;
+		max-width: 196px;
+
+	}
+
+	.servise__feature:hover{
+		cursor: pointer;
+		margin-top: 50px;
+	}
+
+
+
+
+	.ourteam {
+		background-color: #e7f1f8;
+		height: 914px;
+	}
+
+	.ourteam_team {
+		padding-top: 120px;
+		text-align: center;
+		font-size: 41.3px;
+		line-height: 30px;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		color: #3c4761;
+	}
+
+	.ourteam_team::after {
+		content: '';
+		display: block;
+	    width: 87px;
+	    height: 4px;
+	    margin: 0 auto;
+
+	    margin-top: 21px;
+	    margin-bottom: 23px;
+	    background: rgba(0, 0, 0, .3);
+	}
+
+	.ourteam_subtitle {
+		font-size: 18.6px;
+		line-height: 26px;
+		font-weight: 400;
+		letter-spacing: 0.02em;
+		color: #3c4761;
+		text-align: center;
+		margin-bottom: 80px;
+	}
+	.ourteam_peoples {
+		display: flex;
+		justify-content: space-between;
+	}
+	.ourteam_people {
+		width: 200px;
+	}
+	.people_photo {
+		display: block;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+	}
+	.name {
+		margin-top: 42px;
+		margin-bottom: 15px;
+		font-size: 24px;
+		line-height: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+		color: #27283d;
+
+		text-align: center;
+	}
+	.position {
+
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 400;
+		letter-spacing: 0.02em;
+		color: #30bae7;
+
+		text-align: center;
+	}
+	.description {
+		text-align: center;
+		max-width: 195px;
+	}
+	.people_sotialnetworks {
+		margin: 0 auto;
+		margin-top: 30px;
+		display: flex;
+		maxwidth: 165px;
+		justify-content: space-between;
+	}
+
+	.people_sotialnetworks p::before{
+		font-size: 30px;
+		color: rgba(189, 209, 223, .5);
+	}
+
+
+
+	.skills {
+		margin-top: 120px;
+		margin-bottom: 120px;
+	}
+
+	.skills_title {
+		text-align: center;
+		text-transform: uppercase;
+		font-family: 'Titillium Web';
+		font-size: 40px;
+		line-height: 29px;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		color: #3c4761;
+	}
+
+	.skills_title::after, .reports__title::after, .getin__title::after{
+		content: '';
+		display: block;
+	    width: 87px;
+	    height: 4px;
+	    margin: 0 auto;
+
+	    margin-top: 21px;
+	    margin-bottom: 23px;
+	    background: rgba(0, 0, 0, .3);
+	}
+
+
+	.skills_subtitle {	
+		text-align: center;
+		font-family: 'Titillium Web';
+		font-size: 18px;
+		line-height: 26px;
+		font-weight: 400;
+		letter-spacing: 0.02em;
+		color: #3c4761;
+		max-width: 568px;
+		margin: 0 auto;
+		margin-top: 25px;
+	}
+	.skills__charts {
+		margin-top: 85px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.charts__props{
+		width: 160px;
+		height: 160px;
+		position: relative;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+
+
+	.inner {
+	  position: absolute;
+	  color: #3c4761; 
+	  font-size:40px;
+	}
+
+
+
+
+
+
+	#skills__chart_web > svg {
+	  height: 100%;
+	  display: block;
+	}
+
+
+
+	.skills__charts--web h5, .skills__charts--uiux h5, .skills__charts--graphic h5, .skills__charts--css h5{
+		text-align: center;
+		font-family: 'Titillium Web';
+		font-size: 24px;
+		line-height: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+		color: #3c4761;
+
+
+	}
+
+
+
+	.portfolio {
+		background-color: #ffdd99;
+		padding-top: 120px;
+		height: 1420px;
+	}
+
+	.portfolio_title {
+		
+		font-family: 'Titillium Web';
+		font-size: 40px;
+		line-height: 29px;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		color: #393939;
+
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.portfolio_title::after{
+		content: '';
+		display: block;
+	    width: 87px;
+	    height: 4px;
+	    margin: 0 auto;
+
+	    margin-top: 21px;
+	    margin-bottom: 23px;
+	    background: rgba(0, 0, 0, .3);
+	}
+
+	.portfolio_subtitle {
+
+		font-family: 'Titillium Web';
+		font-size: 18px;
+		line-height: 26px;
+		font-weight: 400;
+		letter-spacing: 0.02em;
+		color: #393939;
+		width: 515px;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.portfolio_buttons_row {
+		
+		margin: 0 auto;
+		margin-top: 40px;
+		display: flex;
+		width: 385px;
+		justify-content: space-between;
+	}
+
+	.portfolio_buttons_row__app {
+		width: 85px;
+		text-transform: uppercase;
+		font-family: 'Titillium Web';font-size: 18px;line-height: 19px;font-weight: 400;letter-spacing: 0.02em;color: #393939;
+		margin-left: 5px;
+		height: 38px;
+		border: none;
+		background: #ebcc8d;
+		cursor: pointer;
+	}
+
+	.selected{
+		background: #fff;
+	}
+
+	.portfolio_apps_screenshots {
+		margin-top: 60px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.portfolio_apps_screenshots__FirstRow {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 60px;
+		}
+	.portfolio_apps_screenshot__block {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		font-family: 'Titillium Web';font-size: 18px;line-height: 19px;font-weight: 400;text-transform: uppercase;letter-spacing: 0.02em;color: #393939;
+	}
+
+	.portfolio_apps_screenshot__block p{
+		margin-top: 30px;
+	}
+
+
+	.portfolio_apps_screenshots__SecondRow {
+		display: flex;
+		justify-content: space-between;
+	}
+	.portfolio_loadmore {
+		
+		text-transform: uppercase;
+		text-align: center;
+		margin: 0 auto;
+		margin-top: 80px;
+		display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  border: none;
+	  padding: 30px 60px;
+	  background: #17c2a4;
+	  cursor: pointer;
+	  font-family: 'Titillium Web';font-size: 18px;line-height: 26px;font-weight: 600;letter-spacing: 0.02em;
+	  margin-bottom: 111px;
+	}
+
+
+	.reports {
+
+		padding-top: 120px;
+		background: #d74680;
+	}
+
+	.reports__title {
+		text-align: center;
+		margin: 0 auto;
+		font-size: 40px;line-height: 29px;font-weight: 700;letter-spacing: 0.1em;
+		color: #fff;
+	}
+	.reports__subtitle {
+		font-family: 'Titillium Web';
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: 400;
+	letter-spacing: 0.02em;
+	color: #ffffff;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 70px;
+	}
+	.reports__commentBlock {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.reports__commentBlock img {
+		border-radius: 50%;
+		width: 96px;
+		height: 96px;
+
+
+	}
+
+	.comment_block {
+		max-width: 475px;
+		display: flex;
+		margin-bottom: 150px;
+
+	}
+	.comment_body {
+		margin-left: 50px;
+	}
+	.comment__text {
+		font-style: italic;
+		color: #fff;
+
+		font-family: 'Titillium Web';
+	font-size: 21px;
+	line-height: 31px;
+	font-weight: 400;
+	font-style: italic;
+	letter-spacing: 0.02em;
+	color: #ffffff;
+
+
+	}
+	.comment__name {
+		color: #fff;
+		font-family: 'Titillium Web';font-size: 24px;line-height: 26px;font-weight: 700;text-transform: uppercase;letter-spacing: 0.02em;
+	}
+	.comment__position {
+		color: #fbcc96;
+
+		font-family: 'Titillium Web';
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: 400;
+	letter-spacing: 0.02em;
+	}
+
+	.reports__first_row {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		margin-right: 30px;
+		}
+
+
+	.getintouch {
+		background: #3c5499;
+		padding-bottom: 150px;
+
+	}
+
+	.getin__title {
+		padding-top: 120px;
+		text-align: center;
+		color: #fff;
+		font-family: 'Titillium Web';font-size: 40px;line-height: 29px;font-weight: 700;
+	}
+	.getin__subtitle {
+		color: #fff;
+		text-align: center;
+		font-family: 'Titillium Web';
+		font-size: 18px;line-height: 26px;font-weight: 400;letter-spacing: 0.02em;
+		margin-bottom: 75px;
+	}
+	.getin__Row {
+		display: flex;
+		margin: 0 auto;
+		justify-content: space-between;
+		max-width: 100%;
+		
+	}
+
+
+	.input__name, .input__email {
+		width: 49%;
+		height: 56px;
+
+
+
+		background-color: #273a71;
+		border: none;
+		color: #fff;
+		border-radius: 5px;
+		padding-left: 10px;
+
+	}
+
+	.input__name {
+		
+	}
+	.input__email {
+		
+	}
+	.input__message {
+
+		width: 100%;
+		height: 200px;
+	background-color: #273a71;
+
+	margin: 0 auto;
+	padding-top: 20;
+
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	padding-left: 10px;
+		vertical-align: top;
+		display: block;
+		margin-top: 27px;
+
+	 
+	}
+
+
+
+	.submit{
+		display: block;
+	width: 293px;
+	height: 70px;
+	background-color: #30bae7;
+	font-family: 'Titillium Web';
+	font-size: 18px;
+	line-height: 26px;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	color: #ffffff;
+	border: none;
+	cursor: pointer;
+	margin: 0 auto;
+	margin-top: 60px;
+	border-radius: 10px;	
+
+	}
+
+	footer{
+		background: #344b8e;
+		height: 115px;
+
+	}
+
+	.footer__socials p{
+
+	font-family: 'Titillium Web';font-size: 24px;line-height: 29px;font-weight: 600;letter-spacing: 0.02em;
+	margin: auto;
+
+	cursor: pointer;
+
+	}
+
+	.footer__socials p:hover{
+		color: #30bae7;
+	}
+
+	.footer__socials {
+		display: flex;
+		justify-content: space-between;
+		color: #fff;
+		height: 115px;
+
+
+
+		
+		
+		
+		
+	}
+
+
+
+	@media (min-width: 576px) {
+		.container {
+	    max-width: 540px;
+	  }
+	}
+	@media (min-width: 768px) {
+	  .container {
+	    max-width: 720px;
+	  }
+	}
+	@media (min-width: 992px) {
+	  .container {
+	    max-width: 960px;
+	  }
+	}
+	@media (min-width: 1200px) {
+	  .container {
+	    max-width: 1140px;
+	  }
+	}
+	@media (min-width: 1400px) {
+	  .container {
+	    max-width: 1320px;
+	  }
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	@media (max-width: 1400px) {
+		
+	}
+	@media (max-width:  1200px) {
+	  
+	}
+	@media (max-width: 992px) {
+		.servise__feature h3{
+			line-height: 25px;
+		}
+
+		.servise__sucking_block{
+			margin-top: 50px !important;
+		}
+
+		.people_photo{
+			width: 150px;
+			height: 150px
+		}
+
+		.people_sotialnetworks{
+			margin-left: 10px
+		}
+
+		.name{
+			line-height: 25px;
+		}
+
+		.comment_body{
+			margin-left: 30px;
+
+		}
+
+		.comment__text{
+			line-height: 25px;
+		}
+
+
+
+	  
+	}
+	@media (max-width:  768px) {
+		.header__link{
+			line-height: 10px;
+		}
+
+		.header__link:hover{
+			background: none;
+			border: none;
+			margin-left: 30px;
+				}
+
+		.servicesprovise{
+			height: 100%;
+		}
+
+		.services__features{
+			flex-direction: column;
+
+			padding-bottom: 10px;
+		}
+
+
+	.ourteam{
+		height: 100%;
+	}
+
+	.ourteam_team {
+		line-height: 40px;
+	}
+
+	.ourteam_peoples {
+		flex-direction:column;
+	}
+
+	.ourteam_people {
+		margin: 0 auto;
+		width: 200px;
+		margin-bottom: 50px;
+	}
+	.people_photo {
+		display: block;
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+	}
+	.people_sotialnetworks {
+
+		max-width: 165px;
+	}
+
+
+
+
+	
+	.skills__charts {
+		flex-direction: column;
+		margin: 0 auto;
+		margin-top: 100px;
+	}
+
+	.charts__props{
+		
+	  margin: 0 auto;
+	}
+
+
+	.reports__commentBlock{
+		flex-direction: column;
+	}
+
+
+	.footer__socials p{
+		font-size: 20px;
+	}
+
+	.reports__title{
+		line-height: 40px;
+	}
+	
+	.servise__subtitle{
+		max-width: 90%;
+	}
+
+
+	
+	}
+	@media (max-width: 576px) {
+
+		.portfolio_subtitle{
+			width: 100%;
+		}
+
+	}
+
+		@media (max-width: 460px) {
+
+		.footer__socials p{
+			font-size: 18px;
+		}
+
+	}
