@@ -1,0 +1,470 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: arial;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a{
+
+  text-decoration: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+
+
+.container
+	{
+	  width: 100%;
+	  padding-right: var(--bs-gutter-x, 0.75rem);
+	  padding-left: var(--bs-gutter-x, 0.75rem);
+	  margin-right: auto;
+	  margin-left: auto;
+	}
+
+
+
+
+.burger{
+	display: none !important;
+}
+
+
+.first_block {
+	background-image: url("../img/first_bg.png");
+	height: 700px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+}
+
+header{
+	padding-top: 54px;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 215px;
+}
+
+header>nav>a{
+	color: #fff;
+	text-transform: uppercase;
+}
+
+header>nav{
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.first_block>.container>h2{
+	font-size: 40px;line-height: 1.2;font-weight: 400;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 55px;
+}
+
+
+.first_block>.container>h1{
+	font-size: 75px;line-height: 1.2;font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+.first_block>.container>button{
+	font-family: Arial;
+font-size: 18px;
+line-height: 1.2;
+font-weight: 700;
+
+color: #484543;
+	background: #fed136;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0 auto;
+	border: none;
+	border-radius: 3px;
+	width: 240px;height: 65px;
+	cursor: pointer;
+	display: block;
+	margin-top: 59px;
+	
+}
+
+
+.servises {
+	margin-top: 120px;
+}
+.servises__title, .portfolio__title, .about__title {
+
+font-size: 40px;
+line-height: 75px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: -0.025em;
+color: #222222;
+text-align: center;
+margin-bottom: 20px;
+
+}
+.servises__subtitle, .portfolio__subritle, .aboout__subtitle {
+font-size: 16px;
+line-height: 1.2;
+font-weight: 400;
+color: #777777;
+text-align: center;
+}
+.servises__servises {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 80px;
+	margin-bottom: 115px;
+}
+.servise__card {
+	max-width: 250px;
+}
+.servise__card--image {
+	margin: 0 auto;
+}
+.servise__card--title {
+	text-align: center;
+
+	font-size: 18px;
+	line-height: 75px;
+	font-weight: 700;
+	letter-spacing: -0.025em;
+	color: #222222;
+}
+.servise__card--subtitle {
+	text-align: center;
+	font-size: 14px;
+	line-height: 1.2;
+	font-weight: 400;
+	letter-spacing: -0.025em;
+	color: #777777;
+}
+
+
+.portfolio {
+	margin-top: 120px;
+}
+ 
+
+.portfolio__img {
+	margin-top: 70px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 130px;
+}
+
+
+
+
+.about {
+	max-width: 825px;
+	margin: 0 auto;
+	padding-top: 125px;
+}
+
+
+
+.about__cars {
+	display: grid;
+	grid-template-columns: 1fr 183px 1fr;
+	grid-template-rows:1fr 1fr 1fr 1fr;
+}
+.about__cards__card {
+	margin: 0 auto;
+	display: flex;
+	max-width: 515px;
+}
+.about__photo {
+	margin: 0 auto;
+	width: 183px;
+	height: 183px;
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+
+.card__textblock {
+	width: 285px;
+}
+
+.date{
+font-family: Arial;
+font-size: 18px;
+font-weight: 700;
+text-transform: uppercase;
+color: #222222;
+margin-bottom: 0px;
+
+}
+
+.whatHappen{
+
+	margin-top: 0;
+	font-family: Arial;
+font-size: 18px;
+color: #222222;
+
+text-transform: none;
+}
+.posleft {
+	text-align: right;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	
+
+}
+.posright {
+	text-align: left;
+	grid-column-start: 3;
+	grid-column-end: 4;
+	margin-left: 37px;
+}
+
+.minusright{
+	grid-column-start: 3;
+	grid-column-end: 4;
+
+}
+
+.minusleft{
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+
+#sec_photo{
+	grid-row: 2/3;
+}
+
+#sec_text{
+	grid-row: 2/3;
+
+}
+
+#thrd_rext{
+	grid-row: 3/4;
+}
+
+#forth_text{
+	grid-row: 4/5;
+}
+
+footer{
+	margin-top: 130px;
+	text-align: center;
+	margin-bottom: 115px;
+}
+
+
+footer>p{
+	font-size: 14px;line-height: 22px;font-weight: 400;letter-spacing: -0.025em;color: #555555;
+}
+
+
+
+
+@media (min-width: 576px) {
+		.container {
+	    max-width: 540px;
+	  }
+	}
+	@media (min-width: 768px) {
+	  .container {
+	    max-width: 720px;
+	  }
+	}
+	@media (min-width: 992px) {
+	  .container {
+	    max-width: 960px;
+	  }
+	}
+	@media (min-width: 1200px) {
+	  .container {
+	    max-width: 1140px;
+	  }
+	}
+	@media (min-width: 1400px) {
+	  .container {
+	    max-width: 1320px;
+	  }
+	}
+
+
+
+
+
+
+
+
+
+
+
+	@media (max-width: 1400px) {
+
+		
+	}
+	@media (max-width:  1200px) {
+
+	  
+	}
+	@media (max-width: 992px) {
+		header>nav{
+			width: 75%
+		}
+		.first_block{
+			height: 700px;
+		}
+		.first_block>.container>button{
+			margin-bottom: 10px;
+		}
+		header{
+			margin-bottom: 150px;
+			padding-bottom: 0;
+		}
+
+		.portfolio__img{
+			flex-direction: column;
+		}
+
+		.about__cars{
+			display: flex;
+			flex-direction: column;
+		}
+		.card__textblock{
+			text-align: center;
+			margin: 0 auto;
+
+		}
+		.about__photo{
+			margin-bottom: 10px
+		}
+
+
+
+	  
+	}
+	@media (max-width:  768px) {
+	
+		.servises__servises{
+
+			flex-direction: column;
+		}
+		.servise__card{
+			margin: 0 auto;
+		}
+
+	
+	}
+	@media (max-width: 576px) {
+		header>nav{
+			width: 80%;
+		}
+		header>nav>a{
+			font-size: 14px;
+		}
+
+		.first_block>.container>h1{
+			font-size: 50px;
+		}
+		.first_block>.container>h2{
+			font-size: 20px;
+		}
+		
+
+	}
+
+	@media (max-width: 420px) {
+
+		header>nav{
+			width: 75%;
+		}
+		header>nav>a{
+			font-size: 10px;
+		}
+
+		header>nav>img{
+			height: 18px;
+			width: 69px;
+		}
+
+
+	}
